@@ -65,6 +65,5 @@ res.render('index');
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-console.log(`🚀 Server running on port ${PORT}`);
-console.log(`🔗 Swagger docs: http://localhost:${PORT}/api-docs`);
+console.log(`🚀 Server running on http://localhost:${PORT}`);
 });

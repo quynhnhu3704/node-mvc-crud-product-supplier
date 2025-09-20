@@ -43,9 +43,63 @@ const supplierController = require('../controllers/supplierController');
  *     responses:
  *       200:
  *         description: List of suppliers
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Supplier'
+ *   post:
+ *     summary: Create a new supplier
+ *     tags: [Suppliers]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Supplier'
+ *     responses:
+ *       201:
+ *         description: Supplier created
  */
-router.get('/', supplierController.index);
 
+/**
+ * @swagger
+ * /suppliers/{id}:
+ *   put:
+ *     summary: Update supplier by id
+ *     tags: [Suppliers]
+ *     parameters:
+ *       - name: id
+ *         in: path
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Supplier'
+ *     responses:
+ *       200:
+ *         description: Supplier updated
+ *   delete:
+ *     summary: Delete supplier by id
+ *     tags: [Suppliers]
+ *     parameters:
+ *       - name: id
+ *         in: path
+ *         required: true
+ *         schema:
+ *           type: string
+ *     responses:
+ *       200:
+ *         description: Supplier deleted
+ */
+
+// Routes
+router.get('/', supplierController.index);
 router.get('/new', supplierController.newForm);
 router.post('/', supplierController.create);
 router.get('/:id/edit', supplierController.editForm);
