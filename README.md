@@ -1,23 +1,9 @@
-# Node MVC CRUD Product - Supplier
+# Node MVC CRUD Product & Supplier
 
+Ứng dụng web CRUD quản lý **Nhà cung cấp** và **Sản phẩm**.  
 
-Ứng dụng mẫu: CRUD quản lý **Nhà cung cấp (Supplier)** và **Sản phẩm (Product)** sử dụng Node.js, Express, MongoDB, Mongoose, EJS (Bootstrap) theo kiến trúc MVC.
+- **Nhà cung cấp:** name, address, phone  
+- **Sản phẩm:** name, price, quantity, supplierId  
 
-
-## Tính năng
-- CRUD supplier (name, address, phone)
-- CRUD product (name, price, quantity, supplierId)
-- Giao diện EJS sử dụng Bootstrap 5
-- Swagger UI cho tài liệu API (http://localhost:3000/api-docs)
-
-
-## Yêu cầu
-- Node.js >= 14
-- MongoDB running
-
-
-## Cài đặt
-1. Clone repo
-```bash
-git clone <repo-url>
-cd node-mvc-crud-product-supplier
+## Công nghệ
+Node.js, Express, MongoDB, Mongoose, EJS, Bootstrap, Method-override, dotenv, Swagger

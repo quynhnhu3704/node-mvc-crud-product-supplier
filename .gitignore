@@ -1,5 +1,5 @@
 # Ignore node_modules trong project con
-node-mvc-crud-product-supplier/node_modules/
+node_modules/
 
 # Ignore file .env trong project con
-node-mvc-crud-product-supplier/.env
+.env
